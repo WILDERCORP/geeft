@@ -53,7 +53,7 @@ export default function Index() {
          
         </section>
         <section className={styles.giftCardsSection}>
-          <h2 className={styles.heading}>Popular Gift Cards in the United States</h2>
+          <h2 className={styles.heading}>CHECK YOUR GIFT CARD DETAILS</h2>
           <div className={styles.giftCardFlex}>
             {giftCards.map((card) => (
               <Link key={card.id} href={`/giftcard/${card.id}`} className={styles.giftCard}>

