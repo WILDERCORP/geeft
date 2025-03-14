@@ -25,6 +25,7 @@ const giftCardProviders = [
   { id: 'disney', name: "Disney", imageUrl: "/assets/disney.jpeg" },
   { id: 'chilis', name: "Razorgold", imageUrl: "/assets/razorgold.jpeg" },
   { id: 'kroger', name: "Kroger", imageUrl: "/assets/kroger.jpeg" },
+  { id: 'ebay', name: "eBay", imageUrl: "/assets/ebay.webp" },
 ];
 
 export default function GiftCard({ id }) {
