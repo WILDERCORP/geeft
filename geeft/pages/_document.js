@@ -7,7 +7,7 @@ class MyDocument extends Document {
         <Head>
           {/* Remove the default Next.js favicon */}
           {/* Add your custom favicon here if needed */}
-          {/* <link rel="icon" href="/path/to/your/favicon.ico" /> */}
+          <link rel="icon" href="/path/to/your/favicon.ico" />
         </Head>
         <body>
           <Main />

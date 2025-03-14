@@ -7,16 +7,18 @@ import styles from '../styles/Home.module.css'; // Import the existing CSS file
 
 const giftCardProviders = [
   { id: 'amazon', name: "Amazon", query: "amazon gift card", imageUrl: "/assets/amazon.jpeg" },
+  { id: 'apple', name: "Apple", query: "apple gift card", imageUrl: "/assets/apple.jpeg" },
+  { id: 'googleplay', name: "Google Play", query: "google play gift card", imageUrl: "/assets/googleplay.png" },
+  { id: 'ebay', name: "eBay", query: "ebay gift card", imageUrl: "/assets/ebay.webp" },
+  { id: 'razorgold', name: "RazorGold", query: "razorgold gift card", imageUrl: "/assets/razorgold.jpeg" },
+  { id: 'sephora', name: "Sephora", query: "sephora gift card", imageUrl: "/assets/sephora.jpg" },
   { id: 'visa', name: "Visa", query: "visa gift card", imageUrl: "/assets/visa.png" },
   { id: 'mastercard', name: "Mastercard", query: "mastercard gift card", imageUrl: "/assets/mastercard.jpeg" },
   { id: 'walmart', name: "Walmart", query: "walmart gift card", imageUrl: "/assets/walmart.jpeg" },
   { id: 'target', name: "Target", query: "target gift card", imageUrl: "/assets/target.jpeg" },
   { id: 'starbucks', name: "Starbucks", query: "starbucks gift card", imageUrl: "/assets/starbucks.png" },
-  { id: 'apple', name: "Apple", query: "apple gift card", imageUrl: "/assets/apple.jpeg" },
-  { id: 'googleplay', name: "Google Play", query: "google play gift card", imageUrl: "/assets/googleplay.png" },
   { id: 'bestbuy', name: "Best Buy", query: "best buy gift card", imageUrl: "/assets/bestbuy.jpeg" },
   { id: 'homedepot', name: "Home Depot", query: "home depot gift card", imageUrl: "/assets/homedepot.jpeg" },
-  { id: 'sephora', name: "Sephora", query: "sephora gift card", imageUrl: "/assets/sephora.jpg" },
 ];
 
 const additionalGiftCardProviders = [
@@ -28,7 +30,6 @@ const additionalGiftCardProviders = [
   { id: 'uber', name: "Uber", query: "uber gift card", imageUrl: "/assets/uber.webp" },
   { id: 'netflix', name: "Netflix", query: "netflix gift card", imageUrl: "/assets/netflix.png" },
   { id: 'disney', name: "Disney", query: "disney gift card", imageUrl: "/assets/disney.jpeg" },
-  { id: 'chilis', name: "Razorgold", query: "razorgold gift card", imageUrl: "/assets/razorgold.jpeg" },
   { id: 'kroger', name: "Kroger", query: "kroger gift card", imageUrl: "/assets/kroger.jpeg" },
 ];
 
