@@ -145,11 +145,6 @@
   bottom: 0;
   box-shadow: 0 -2px 4px var(--card-shadow);
 }
-
 .h2 {
   padding-top: 20px;
-}
-
-.Home_giftCardsSection__GtQnT + .Home_giftCardsSection__GtQnT {
-  margin-top: 40px; /* Add space between the two gift card sections */
 }
