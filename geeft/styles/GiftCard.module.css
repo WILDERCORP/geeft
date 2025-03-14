@@ -88,6 +88,13 @@
   outline: none;
 }
 
+.optionalText {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: var(--text-color);
+  text-align: center;
+}
+
 .submitButton {
   background-color: var(--button-bg);
   color: var(--button-text-color);
