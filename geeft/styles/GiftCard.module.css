@@ -1,0 +1,113 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat-Regular.ttf') format('truetype');
+}
+
+.root {
+  --primary-color: #0070f3;
+  --secondary-color: #005bb5;
+  --background-color: #f8f9fa;
+  --text-color: #333;
+  --header-footer-bg: #ffffff;
+  --card-bg: #ffffff;
+  --card-shadow: rgba(0, 0, 0, 0.1);
+  --button-bg: #0070f3; /* Primary color */
+  --button-hover-bg: #005bb5; /* Secondary color */
+  --button-text-color: #ffffff; /* White text */
+  --gradient-bg: linear-gradient(135deg, #f8f9fa 25%, #e0e0e0 100%);
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--gradient-bg);
+  color: var(--text-color);
+}
+
+.header {
+  background-color: var(--header-footer-bg);
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 4px var(--card-shadow);
+}
+
+.main {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cardDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.cardImage {
+  margin-top: 10px;
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px var(--card-shadow);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 300px;
+}
+
+.label {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: var(--primary-color);
+  align-self: flex-start;
+}
+
+.input {
+  margin-top: 5px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 5px rgba(0, 112, 243, 0.5);
+  outline: none;
+}
+
+.submitButton {
+  background-color: var(--button-bg);
+  color: var(--button-text-color);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.submitButton:hover {
+  background-color: var(--button-hover-bg);
+}
+
+.footer {
+  background-color: var(--header-footer-bg);
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 -2px 4px var(--card-shadow);
+}

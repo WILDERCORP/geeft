@@ -1,0 +1,155 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat-Regular.ttf') format('truetype');
+}
+
+.root {
+  --primary-color: #0070f3;
+  --secondary-color: #005bb5;
+  --background-color: #f8f9fa;
+  --text-color: #333;
+  --header-footer-bg: #ffffff;
+  --card-bg: #ffffff;
+  --card-shadow: rgba(0, 0, 0, 0.1);
+  --button-bg: #0070f3;
+  --button-hover-bg: #005bb5;
+  --gradient-bg: linear-gradient(135deg, #f8f9fa 25%, #e0e0e0 100%);
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--gradient-bg);
+  color: var(--text-color);
+}
+
+.header {
+  background-color: var(--header-footer-bg);
+  padding: 20px;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px var(--card-shadow);
+}
+
+.headerContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.headerContent h1 {
+  margin-left: 10px;
+  font-size: 1.5rem;
+}
+
+.main {
+  flex: 1;
+  padding: 100px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.onboarding {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.onboarding h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.onboarding p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.startButton {
+  background-color: var(--button-bg);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: center;
+}
+
+.startButton:hover {
+  background-color: var(--button-hover-bg);
+}
+
+.giftCardsSection {
+  width: 100%;
+}
+
+.heading {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.giftCardFlex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.additionalGiftCards {
+  margin-top: 40px; /* Add space between the two sets of gift cards */
+}
+
+.giftCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  background-color: var(--card-bg);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px var(--card-shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.giftCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.giftCard p {
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 10px 20px;
+}
+
+.footer {
+  background-color: var(--header-footer-bg);
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  box-shadow: 0 -2px 4px var(--card-shadow);
+}
+
+.h2 {
+  padding-top: 20px;
+}
+
+.Home_giftCardsSection__GtQnT + .Home_giftCardsSection__GtQnT {
+  margin-top: 40px; /* Add space between the two gift card sections */
+}
