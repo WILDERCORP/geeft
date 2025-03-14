@@ -1,12 +1,12 @@
 {
   "name": "geeft",
   "version": "1.0.0",
-  "description": "Gift Card Hub",
-  "main": "index.js",
+  "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
     "next": "latest",
@@ -14,7 +14,8 @@
     "react-dom": "latest",
     "emailjs-com": "^3.2.0"
   },
-  "devDependencies": {},
-  "author": "",
-  "license": "ISC"
+  "devDependencies": {
+    "eslint": "latest",
+    "eslint-config-next": "latest"
+  }
 }
